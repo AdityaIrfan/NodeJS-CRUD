@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "25a539fa-a53e-4447-91ae-c150f3aa0671",
+		"name": "Typescript Mongodb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Fanta\",\n    \"price\": 7000,\n    \"quantity\": 19\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/product",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Aqua\",\n    \"price\": 4000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/product/62f3da05f6eb094bd8839221",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"product",
+								"62f3da05f6eb094bd8839221"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/product/62f3da05f6eb094bd8839221",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"product",
+								"62f3da05f6eb094bd8839221"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/product",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/product/62f3da05f6eb094bd8839221",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"product",
+								"62f3da05f6eb094bd8839221"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": \"62f3da05f6eb094bd8839221\",\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/transaction",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/transaction?limit=2&page",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"transaction"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/transaction/62f3e520bd8978daed87a273",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"transaction",
+								"62f3e520bd8978daed87a273"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/transaction/62f3e520bd8978daed87a273",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"transaction",
+								"62f3e520bd8978daed87a273"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/transaction/62f3f5a943386982ed9af82b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"transaction",
+								"62f3f5a943386982ed9af82b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
